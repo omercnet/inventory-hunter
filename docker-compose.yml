@@ -28,11 +28,11 @@ services:
     image: ericjmarti/inventory-hunter:latest
     command: --alerter discord --alerter-config /alerters.yaml -l /var/log/ryzen_9_5900.log
 
-  rtx_3080:
+  gfx:
     volumes:
-      - ./data/rtx_3080:/data
+      - ./data/gfx:/data
       - ./log/:/var/log/
-      - ./config/rtx_3080.yaml:/config.yaml
+      - ./config/gfx.yaml:/config.yaml
       - ./config/alerters.yaml:/alerters.yaml
     image: ericjmarti/inventory-hunter:latest
-    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/rtx_3080.log
+    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/gfx.log
