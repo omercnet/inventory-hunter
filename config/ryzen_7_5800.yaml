@@ -1,0 +1,8 @@
+---
+max_price: 500 # dollars/euros/etc
+refresh_interval: 2 # seconds
+urls:
+  - https://www.newegg.com/amd-ryzen-7-5800x/p/N82E16819113665
+  - https://www.amazon.com/AMD-Ryzen-5800X-16-Thread-Processor/dp/B0815XFSGK
+  - https://www.bhphotovideo.com/c/product/1598376-REG/amd_100_100000063wof_ryzen_7_5800x_3_8.html
+  - https://www.bestbuy.com/site/amd-ryzen-7-5800x-4th-gen-8-core-16-threads-unlocked-desktop-processor-without-cooler/6439000.p?skuId=6439000

@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  ryzen_5_5600:
+    volumes:
+      - ./data/ryzen_5_5600:/data
+      - ./log/:/var/log/
+      - ./config/ryzen_5_5600.yaml:/config.yaml
+      - ./config/alerters.yaml:/alerters.yaml
+    image: ericjmarti/inventory-hunter:latest
+    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/ryzen_5_5600.log
+
+  ryzen_7_5800:
+    volumes:
+      - ./data/ryzen_7_5800:/data
+      - ./log/:/var/log/
+      - ./config/ryzen_7_5800.yaml:/config.yaml
+      - ./config/alerters.yaml:/alerters.yaml
+    image: ericjmarti/inventory-hunter:latest
+    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/ryzen_7_5800.log
+
+  ryzen_9_5900:
+    volumes:
+      - ./data/ryzen_9_5900:/data
+      - ./log/:/var/log/
+      - ./config/ryzen_9_5900.yaml:/config.yaml
+      - ./config/alerters.yaml:/alerters.yaml
+    image: ericjmarti/inventory-hunter:latest
+    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/ryzen_9_5900.log
+
+  rtx_3080:
+    volumes:
+      - ./data/rtx_3080:/data
+      - ./log/:/var/log/
+      - ./config/rtx_3080.yaml:/config.yaml
+      - ./config/alerters.yaml:/alerters.yaml
+    image: ericjmarti/inventory-hunter:latest
+    command: --alerter discord --alerter-config /alerters.yaml -l /var/log/rtx_3080.log

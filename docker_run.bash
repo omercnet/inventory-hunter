@@ -107,7 +107,7 @@ docker_ps_cmd="docker ps -a -f name=$container_name"
 eval $docker_run_cmd
 echo
 echo "started docker container named $container_name"
-echo
+echo "echo $docker_run_cmd"
 echo "view the status of this container using the following command:"
 echo "\$ $docker_ps_cmd"
 echo
